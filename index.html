@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CheckWhoCalled | Coming Soon</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Outfit", sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .animation-area {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .phone {
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      width: 50px;
+      height: 50px;
+      background: #4caf50;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      animation: fly 4s ease-in-out infinite;
+    }
+
+    .plane {
+      position: absolute;
+      right: 0;
+      top: 20px;
+      width: 45px;
+      height: 45px;
+      background: #0088cc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 22px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+      }
+      45% {
+        transform: translate(80px, -100px) rotate(-15deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translate(100px, -120px) rotate(-20deg);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    .glow {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #0088cc, 0 0 10px #0088cc;
+      }
+      to {
+        text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #777;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: #0088cc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #005f99;
+    }
+
+    .credits {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+
+    .credits span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .heart {
+      color: #e63946;
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .animation-area {
+        width: 150px;
+        height: 150px;
+      }
+      .phone, .plane {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
+  </style>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1 class="glow">CheckWhoCalled</h1>
+  <p>We’re building something exciting — identify unknown callers instantly.</p>
+
+  <div class="animation-area">
+    <div class="phone"><i class="fas fa-phone"></i></div>
+    <div class="plane"><i class="fab fa-telegram-plane"></i></div>
+  </div>
+
+  <footer>
+    <div class="credits">
+      <span>🌐 Hosting Partner: <a href="https://vercel.com" target="_blank">Vercel</a></span>
+      <span>⚙️ API by: <a href="https://www.truecaller.com" target="_blank">Truecaller</a></span>
+    </div>
+    <div>🇮🇳 Made with <span class="heart">❤️</span> in India by <a href="#">Cres&Co</a></div>
+    <div>🚀 Launching Soon | Stay Tuned</div>
+  </footer>
+</body>
+</html>
